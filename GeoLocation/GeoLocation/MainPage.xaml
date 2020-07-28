@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mymap="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="GeoLocation.MainPage">
+
+    <!--<mymap:Map x:Name="mylocalmap"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"/>-->
+
+    <!--<Grid>
+        <mymap:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True">
+            <mymap:Map.ItemTemplate>
+                <DataTemplate>
+                    <mymap:Pin Position="{Binding Position}"
+                               Address ="{Binding Address}"
+                               Label ="{Binding PlaceName}"/>
+                </DataTemplate>
+            </mymap:Map.ItemTemplate>
+        </mymap:Map>
+    </Grid>-->
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Options: " />
+            <Label Text="Name: " />
+            <Entry x:Name="EntryName"/>
+
+            <Label Text="Latitude: " Margin="0,24,0,0" />
+            <Entry Keyboard="Numeric" Text="60.123558"
+                   x:Name="EntryLatitude"/>
+
+            <Label Text="Longitude: " />
+            <Entry Keyboard="Numeric" Text="16.664340"
+                   x:Name="EntryLongitude"/>
+            <Button Text="Open coordinates" x:Name="ButtonOpenCoords"
+                    Clicked="ButtonOpenCoords_Clicked"/>
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
